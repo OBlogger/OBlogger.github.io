@@ -6543,9 +6543,92 @@ time.comment-time {
   color: var(--efu-secondtext);
   margin-left: auto;
 }
+#bbTimeList {
+  background: var(--efu-card-bg);
+  border-radius: 12px;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  border: var(--style-border);
+  transition: 0.3s;
+  height: 50px;
+  width: 100%;
+  justify-content: space-between;
+  user-select: none;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  animation: slide-in 0.6s 0s backwards;
+  margin-bottom: 0.5rem;
+}
+#bbTimeList.more-page {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1300px) {
+  #bbTimeList:hover {
+    border: var(--style-border-hover);
+    box-shadow: var(--efu-shadow-main);
+  }
+}
+@media screen and (max-width: 768px) {
+  #bbTimeList {
+    margin: 0;
+    background: var(--efu-background);
+    border: none;
+  }
+}
+i.bber-logo,
+i.bber-gotobb {
+  transition: 0.3s;
+  cursor: pointer;
+}
+i.bber-logo:hover,
+i.bber-gotobb:hover {
+  opacity: 0.8;
+  color: var(--efu-theme);
+}
+i.bber-logo {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+i.bber-gotobb {
+  font-size: 16px;
+  margin-left: 1rem;
+}
 #bber {
   margin-top: 0.5rem;
   width: 100%;
+}
+#bber .meta {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  position: relative;
+  width: 100%;
+  margin-bottom: 4px;
+}
+#bber .meta .avatar {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+#bber .meta .info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+#bber .meta .info span.bber_nick {
+  color: var(--efu-main);
+  font-size: 0.9rem;
+}
+#bber .meta .info time.bber_date {
+  font-size: 14px;
+  opacity: 0.6;
+}
+#bber .meta .goComment {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 #bber div.bber-content {
   display: flex;
@@ -6554,65 +6637,6 @@ time.comment-time {
   border-radius: 12px;
   width: 100%;
   height: 100%;
-}
-#bber .bber-bottom {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  user-select: none;
-}
-#bber .bber-info {
-  display: flex;
-  align-items: center;
-}
-#bber .bber-info .fa-rectangles-mixed {
-  margin-right: 8px;
-}
-#bber .bber-info .bber-info-time,
-#bber .bber-info .bber-info-location {
-  margin-right: 0.5rem;
-  color: var(--efu-fontcolor);
-  font-size: 0.7rem;
-  background-color: var(--efu-gray-op);
-  padding: 0 8px;
-  border-radius: 20px;
-  cursor: default;
-  display: flex;
-  align-items: center;
-}
-#bber .bber-info .bber-info-time i,
-#bber .bber-info .bber-info-location i {
-  margin-right: 8px;
-  font-size: 16px;
-}
-#bber .bber-info .bber-info-time .datafrom,
-#bber .bber-info .bber-info-location .datafrom {
-  order: 2;
-  color: var(--efu-secondtext);
-  font-size: 0.7rem;
-  margin-left: 8px;
-}
-#bber .bber-info .bber-info-time .datafrom small,
-#bber .bber-info .bber-info-location .datafrom small {
-  font-size: 0.7rem;
-}
-#bber .bber-info .bber-content-link {
-  display: flex;
-  margin-right: 0.5rem;
-  color: var(--efu-secondtext);
-  font-size: 0.7rem;
-  align-items: center;
-  background-color: rgba(245,108,108,0.13);
-  padding: 0 8px;
-  border-radius: 20px;
-}
-#bber .bber-info .bber-content-link:hover {
-  background-color: var(--efu-main);
-  color: var(--efu-white);
-}
-#bber .bber-info .bber-content-link i {
-  margin-right: 3px;
-  font-size: 16px;
 }
 #bber .count {
   color: var(--efu-secondtext);
