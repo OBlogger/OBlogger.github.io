@@ -1,0 +1,1269 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>洛谷新手村 | Oblogger</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://cdn.luogu.com.cn/upload/image_hosting/v6e5dtf6.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.12.2"><!-- inject head--><link rel="canonical" href="http://example.com/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/"><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><!-- aplayer--><!-- swiper--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><!-- katex--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"><!-- Open Graph--><meta name="description" content="新手村 任何一个伟大的目标，都有一个微不足道的开始。 洛谷的第一个任务 勇敢的迈出第一步，了解下语言和洛谷。跟着书本和老师走，不会难的。 P1000 超级玛丽游戏 P1001 A+B Problem P1421 小玉买文具 P1425 小鱼的游泳时间 顺序与分支 计算机的智能性开始得以体现，因为"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Oblogger"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="https://cdn.luogu.com.cn/upload/image_hosting/v6e5dtf6.png"><link rel="apple-touch-icon" href="https://cdn.luogu.com.cn/upload/image_hosting/v6e5dtf6.png" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.12.2",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2024-06-15 10:01:56',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.avif'
+    },
+    copyright: {"limit":50,"author":"作者: czm","link":"链接: ","source":"来源: Oblogger","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。"},"barrage":{"title":"热评"}},
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多","🎮 电竞游戏爱好者"],
+        sayhello3: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {"avatar":"https://cdn.luogu.com.cn/upload/image_hosting/1vfc90a9.png","commentBarrage":true},
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","barrage":{"open":"显示热评","close":"关闭热评"},"translate":{"translateDelay":0,"defaultEncoding":2}},
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="https://cdn.luogu.com.cn/upload/image_hosting/v6e5dtf6.png" alt="loading image"></div></div><script>const preloader = {
+    endLoading: () => {
+        document.getElementById('loading-box').classList.toggle('loaded');
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+    },
+    removePaceDone: () => {
+        document.getElementById('body').classList = 'pace-done';
+    }
+}
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});</script><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论<a class="recent-comment-more" href="/recentcomments/" title="最近评论"><i class="solitude st-right-btn-fill"></i></a></div></div><a class="recent-comment-image" href="/recentcomments/"><img src="/img/recent_c.avif"></a></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/Latex/">Latex<sup>1</sup></a><a href="/tags/hello/">hello<sup>1</sup></a><a href="/tags/%E9%A2%98%E5%8D%95/">题单<sup>1</sup></a><a href="/tags/CF/">CF<sup>1</sup></a><a href="/tags/cpp/">cpp<sup>1</sup></a><a href="/tags/czm/">czm<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">2024/07</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">2024/06</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span class="card-archive-list-count-unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude st-side-bar-fill"></i></span></div><div class="console-btn-item" id="consoleKeyboard" onclick="sco.switchKeyboard()"><span class="keyboardSwitch" title="键盘快捷键"><i class="solitude st-keyboard-box-fill"></i></span></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><span class="commentBarrage"><i class="solitude st-chat-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  st-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/Latex/">Latex<sup>1</sup></a><a href="/tags/hello/">hello<sup>1</sup></a><a href="/tags/%E9%A2%98%E5%8D%95/">题单<sup>1</sup></a><a href="/tags/CF/">CF<sup>1</sup></a><a href="/tags/cpp/">cpp<sup>1</sup></a><a href="/tags/czm/">czm<sup>1</sup></a></div></div></div></div><!-- keyboard--><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keyboardList"><div class="keyboardItem"><div class="keyGroup"><div class="key">Shift</div><div class="key">A</div></div><div class="keyContent"><div class="content">打开中控台</div></div></div></div></div><script>const keyboard_addKeyup = (e) => {
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.remove('show');
+    }
+}
+
+const keyboard_addKeydown = (e) => {
+    const keyboards = [{"name":"打开中控台","key":"A","sco":"showConsole"}];
+    if (e.keyCode === 16) {
+        document.getElementById('keyboard-tips').classList.add('show');
+    }
+
+    for (let i = 0; i < keyboards.length; i++) {
+        if (keyboards[i].url) {
+            if (keyboards[i].url.startsWith('http')) {
+                if (e.key === keyboards[i].key) {
+                    window.open(keyboards[i].url);
+                }
+            } else {
+                if (e.key === keyboards[i].key) {
+                    pjax.loadUrl(keyboards[i].url);
+                }
+            }
+        } else if (keyboards[i].sco) {
+            if (e.key === keyboards[i].key) {
+                sco[keyboards[i].sco]();
+            }
+        } else if (keyboards[i].func) {
+            if (e.key === keyboards[i].key) {
+                window[keyboards[i].func]();
+            }
+        }
+    }
+}
+
+function openKeyboard() {
+
+    window.addEventListener('keyup', keyboard_addKeyup);
+
+    window.addEventListener('keydown', keyboard_addKeydown);
+}
+function closeKeyboard() {
+
+    window.removeEventListener('keyup', keyboard_addKeyup);
+
+    window.removeEventListener('keydown', keyboard_addKeydown);
+}
+
+var sco_keyboards = localStorage.getItem('keyboard') === 'true'
+if (sco_keyboards) {
+    openKeyboard();
+    document.getElementById('consoleKeyboard').classList.add('on');
+}</script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude st-more-fill"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页"><span class="title">Oblogger</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">洛谷新手村</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  st-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude st-dice-line"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude st-search-line"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><i class="solitude st-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://cdn.luogu.com.cn/upload/image_hosting/3zuknbzz.png" alt="洛谷新手村"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E6%B4%9B%E8%B0%B7/">洛谷</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%A2%98%E5%8D%95/"><span class="tags-name tags-punctuation">题单</span></a></div></div></div></div><h1 class="post-title">洛谷新手村</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2024-07-08 22:20:17"><i class="post-meta-icon solitude st-calendar-todo-fill"></i><time datetime="2024-07-08T14:20:17.000Z">2024-07-08T14:20:17.000Z</time></span><span class="post-meta-date" title="最后更新于 2024-07-08 22:22:30"><i class="post-meta-icon solitude st-refresh-line"></i><time datetime="2024-07-08T14:22:30.000Z">2024-07-08T14:22:30.000Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude st-word-fill" title="文章字数"></i><span class="word-count">5.8k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude st-clock-fill" title="阅读耗时"></i><span>23 min</span></span><span class="post-meta-position" title="作者IP归属地为东莞"><i class="post-meta-icon solitude st-map-pin-fill"></i><span>东莞</span></span><a class="post-meta-pv" href="/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/" title="文章热度"><i class="post-meta-icon solitude st-fire-fill"></i></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="solitude st-chat-fill"></i><a href="/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/#post-comment"></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>新手村</h1>
+<p>任何一个伟大的目标，都有一个微不足道的开始。</p>
+<h2 id="洛谷的第一个任务"><a class="headerlink" href="#洛谷的第一个任务"></a>洛谷的第一个任务</h2>
+<p>勇敢的迈出第一步，了解下语言和洛谷。跟着书本和老师走，不会难的。</p>
+<ul>
+<li><a href="/problem/P1000">P1000 超级玛丽游戏</a></li>
+<li><a href="/problem/P1001">P1001 A+B Problem</a></li>
+<li><a href="/problem/P1421">P1421 小玉买文具</a></li>
+<li><a href="/problem/P1425">P1425 小鱼的游泳时间</a></li>
+</ul>
+<h2 id="顺序与分支"><a class="headerlink" href="#顺序与分支"></a>顺序与分支</h2>
+<p>计算机的智能性开始得以体现，因为计算机能够根据不同的条件选择了。</p>
+<ul>
+<li><a href="/problem/P1422">P1422 小玉家的电费</a></li>
+<li><a href="/problem/P1085">P1085 不高兴的津津</a></li>
+<li><a href="/problem/P1089">P1089 津津的储蓄计划</a></li>
+<li><a href="/problem/P1909">P1909 买铅笔</a></li>
+</ul>
+<h2 id="循环！循环！循环！"><a class="headerlink" href="#循环！循环！循环！"></a>循环！循环！循环！</h2>
+<p>计算机最不怕的就是重复。你让它做10000次同样的事它也不怕啦，但是让他做1亿亿次的话……</p>
+<ul>
+<li><a href="/problem/P1008">P1008 三连击</a></li>
+<li><a href="/problem/P1035">P1035 级数求和</a></li>
+<li><a href="/problem/P1423">P1423 小玉在游泳</a></li>
+<li><a href="/problem/P1424">P1424 小鱼的航程(改进版)</a></li>
+<li><a href="/problem/P1980">P1980 计数问题</a></li>
+</ul>
+<h2 id="数组"><a class="headerlink" href="#数组"></a>数组</h2>
+<p>跟数组有关的题目基本上都要用到循环，所以请先完成1-3。</p>
+<ul>
+<li><a href="/problem/P1046">P1046 陶陶摘苹果</a></li>
+<li><a href="/problem/P1047">P1047 校门外的树</a></li>
+<li><a href="/problem/P1427">P1427 小鱼的数字游戏</a></li>
+<li><a href="/problem/P1428">P1428 小鱼比可爱</a></li>
+<li><a href="/problem/P2141">P2141 珠心算测验</a></li>
+<li><a href="/problem/P1567">P1567 统计天数</a></li>
+</ul>
+<h2 id="简单字符串"><a class="headerlink" href="#简单字符串"></a>简单字符串</h2>
+<p>计算机不仅可以处理数字，还能处理文字！就是其实跟数字也没什么差。</p>
+<ul>
+<li><a href="/problem/P1055">P1055 ISBN号码</a></li>
+<li><a href="/problem/P1200">P1200 	[USACO1.1]你的飞碟在这儿Your Ride Is Here</a></li>
+<li><a href="/problem/P1308">P1308 统计单词数</a></li>
+<li><a href="/problem/P1553">P1553 数字反转（升级版）</a></li>
+<li><a href="/problem/P1598">P1598 垂直柱状图</a></li>
+<li><a href="/problem/P1914">P1914 小书童——密码</a></li>
+</ul>
+<h2 id="过程函数与递归"><a class="headerlink" href="#过程函数与递归"></a>过程函数与递归</h2>
+<p>将代码串进行打包，就是过程与函数。过程与函数调用自己则为递归。有一点小难但不要怕哦。</p>
+<ul>
+<li><a href="/problem/P1028">P1028 数的计算</a></li>
+<li><a href="/problem/P1036">P1036 选数</a></li>
+<li><a href="/problem/P1149">P1149 火柴棒等式</a></li>
+<li><a href="/problem/P1217">P1217 [USACO1.5]回文质数 Prime Palindromes</a></li>
+</ul>
+<h2 id="BOSS战-入门综合练习1"><a class="headerlink" href="#BOSS战-入门综合练习1"></a>BOSS战-入门综合练习1</h2>
+<p>这里将前面的内容综合起来了，会有点难，不过你可以问老师同学，也能上网查资料。</p>
+<ul>
+<li><a href="/problem/P1478">P1478 陶陶摘苹果（升级版）</a></li>
+<li><a href="/problem/P1618">P1618 三连击（升级版）</a></li>
+<li><a href="/problem/P1579">P1579 哥德巴赫猜想（升级版）</a></li>
+<li><a href="/problem/P2089">P2089 烤鸡</a></li>
+</ul>
+<h2 id="BOSS战-入门综合练习2"><a class="headerlink" href="#BOSS战-入门综合练习2"></a>BOSS战-入门综合练习2</h2>
+<p>勇士，竟然来到了BOSS的老巢！来一场恶斗，证明自己的实力，解锁下一个级别！</p>
+<ul>
+<li><a href="/problem/P1426">P1426 小鱼会有危险吗</a></li>
+<li><a href="/problem/P1464">P1464 Function</a></li>
+<li><a href="/problem/P1014">P1014 Cantor表</a></li>
+<li><a href="/problem/P1022">P1022 计算器的改良</a></li>
+<li><a href="/problem/P1307">P1307 数字反转</a></li>
+</ul>
+<h1>普及练习场</h1>
+<p>普及组选手可冲刺训练，提高组选手亦可在此巩固基础。</p>
+<h2 id="简单的模拟"><a class="headerlink" href="#简单的模拟"></a>简单的模拟</h2>
+<p>开始普及组的训练！所谓模拟，就是直接根据题意编写，思维难度简单。</p>
+<ul>
+<li><a href="/problem/P1003">P1003 铺地毯</a></li>
+<li><a href="/problem/P1067">P1067 多项式输出</a></li>
+<li><a href="/problem/P1540">P1540 机器翻译</a></li>
+<li><a href="/problem/P1056">P1056 排座椅</a></li>
+<li><a href="/problem/P1328">P1328 生活大爆炸版石头剪刀布</a></li>
+<li><a href="/problem/P1563">P1563 玩具谜题</a></li>
+</ul>
+<h2 id="交叉模拟"><a class="headerlink" href="#交叉模拟"></a>交叉模拟</h2>
+<p>这里也是模拟，但是会混有些别的部分。思维难度不大，但是编写起来会有些难度。</p>
+<ul>
+<li><a href="/problem/P1023">P1023 税收与补贴问题</a></li>
+<li><a href="/problem/P1031">P1031 均分纸牌</a></li>
+<li><a href="/problem/P1042">P1042 乒乓球</a></li>
+<li><a href="/problem/P1086">P1086 花生采摘</a></li>
+<li><a href="/problem/P1098">P1098 字符串的展开</a></li>
+<li><a href="/problem/P3952">P3952 时间复杂度</a></li>
+</ul>
+<h2 id="排序"><a class="headerlink" href="#排序"></a>排序</h2>
+<p>将杂乱无章的数据变得有规律。有各种各样的排序算法，看情况使用。</p>
+<ul>
+<li><a href="/problem/P1177">P1177 【模板】快速排序</a></li>
+<li><a href="/problem/P1059">P1059 明明的随机数</a></li>
+<li><a href="/problem/P1068">P1068 分数线划定</a></li>
+<li><a href="/problem/P1781">P1781 宇宙总统</a></li>
+</ul>
+<h2 id="排序Ex"><a class="headerlink" href="#排序Ex"></a>排序Ex</h2>
+<p>这里的排序就更上一层了。不仅融合了别的算法与技巧，排序本身也有各种花招。</p>
+<ul>
+<li><a href="/problem/P1583">P1583 魔法照片</a></li>
+<li><a href="/problem/P1051">P1051 谁拿了最多奖学金</a></li>
+<li><a href="/problem/P1093">P1093 奖学金</a></li>
+<li><a href="/problem/P1309">P1309 瑞士轮</a></li>
+</ul>
+<h2 id="字符串处理"><a class="headerlink" href="#字符串处理"></a>字符串处理</h2>
+<p>这里的字符串处理还会变得更加的有意思，难度也更大。需要好好地思考一下。</p>
+<ul>
+<li><a href="/problem/P1603">P1603 斯诺登的密码</a></li>
+<li><a href="/problem/P1071">P1071 潜伏者</a></li>
+<li><a href="/problem/P1012">P1012 拼数</a></li>
+<li><a href="/problem/P1538">P1538 迎春舞会之数字舞蹈</a></li>
+</ul>
+<h2 id="贪心"><a class="headerlink" href="#贪心"></a>贪心</h2>
+<p>贪心就是只考虑眼前的利益。对于我们人生来说太贪是不好的，不过oi中，有时是对的。</p>
+<ul>
+<li><a href="/problem/P1090">P1090 合并果子 / [USACO06NOV]Fence Repair G</a></li>
+<li><a href="/problem/P1181">P1181 数列分段Section I</a></li>
+<li><a href="/problem/P1208">P1208 [USACO1.3]混合牛奶 Mixing Milk</a></li>
+<li><a href="/problem/P1223">P1223 排队接水</a></li>
+<li><a href="/problem/P1094">P1094 纪念品分组</a></li>
+<li><a href="/problem/P1803">P1803 凌乱的yyy / 线段覆盖</a></li>
+<li><a href="/problem/P1031">P1031 均分纸牌</a></li>
+<li><a href="/problem/P1080">P1080 国王游戏</a></li>
+</ul>
+<h2 id="深度优先搜索"><a class="headerlink" href="#深度优先搜索"></a>深度优先搜索</h2>
+<p>搜索可以穷举各种情况。很多题目都可以用搜索完成。就算不能，搜索也是骗分神器。</p>
+<ul>
+<li><a href="/problem/P1219">P1219 [USACO1.5]八皇后 Checker Challenge</a></li>
+<li><a href="/problem/P1019">P1019 单词接龙</a></li>
+<li><a href="/problem/P1101">P1101 单词方阵</a></li>
+<li><a href="/problem/P1605">P1605 迷宫</a></li>
+<li><a href="/problem/P1040">P1040 加分二叉树</a></li>
+<li><a href="/problem/P1092">P1092 虫食算</a></li>
+</ul>
+<h2 id="广度优先搜索"><a class="headerlink" href="#广度优先搜索"></a>广度优先搜索</h2>
+<p>广度优先搜索可以用来找有关“最短步数”的问题。恩，也可以用来“地毯式搜索”。</p>
+<ul>
+<li><a href="/problem/P1162">P1162 填涂颜色</a></li>
+<li><a href="/problem/P1032">P1032 字串变换</a></li>
+<li><a href="/problem/P1141">P1141 01迷宫</a></li>
+<li><a href="/problem/P1126">P1126 机器人搬重物</a></li>
+<li><a href="/problem/P1443">P1443 马的遍历</a></li>
+</ul>
+<h2 id="带有技巧的搜索"><a class="headerlink" href="#带有技巧的搜索"></a>带有技巧的搜索</h2>
+<p>这里的搜索不仅包含了dfs和bfs，还包括剪枝、记录等技巧以加快速度。</p>
+<ul>
+<li><a href="/problem/P1118">P1118 [USACO06FEB]Backward Digit Sums G/S</a></li>
+<li><a href="/problem/P1434">P1434 [SHOI2002]滑雪</a></li>
+<li><a href="/problem/P1433">P1433 吃奶酪</a></li>
+<li><a href="/problem/P1074">P1074 靶形数独</a></li>
+</ul>
+<h2 id="分治算法"><a class="headerlink" href="#分治算法"></a>分治算法</h2>
+<p>将大问题拆分为小问题，分而治之，各个击破，然后在合并回来。</p>
+<ul>
+<li><a href="/problem/P1226">P1226 【模板】快速幂||取余运算</a></li>
+<li><a href="/problem/P1010">P1010 幂次方</a></li>
+<li><a href="/problem/P1908">P1908 逆序对</a></li>
+<li><a href="/problem/P1498">P1498 南蛮图腾</a></li>
+</ul>
+<h2 id="简单数学问题"><a class="headerlink" href="#简单数学问题"></a>简单数学问题</h2>
+<p>用计算机解决某些麻烦数学问题，再合适不过了。这真是绝妙的搭配啊！</p>
+<ul>
+<li><a href="/problem/P1088">P1088 火星人</a></li>
+<li><a href="/problem/P1045">P1045 麦森数</a></li>
+<li><a href="/problem/P1403">P1403 [AHOI2005]约数研究</a></li>
+<li><a href="/problem/P1017">P1017 进制转换</a></li>
+<li><a href="/problem/P1147">P1147 连续自然数和</a></li>
+<li><a href="/problem/P1029">P1029 最大公约数和最小公倍数问题</a></li>
+</ul>
+<h2 id="递推与递归二分"><a class="headerlink" href="#递推与递归二分"></a>递推与递归二分</h2>
+<p>递推，层层递进，由基础推向顶层。二分不仅可以用来查找数据，还可以确定最合适的值。</p>
+<ul>
+<li><a href="/problem/P1192">P1192 台阶问题</a></li>
+<li><a href="/problem/P1025">P1025 数的划分</a></li>
+<li><a href="/problem/P1057">P1057 传球游戏</a></li>
+<li><a href="/problem/P1135">P1135 奇怪的电梯</a></li>
+<li><a href="/problem/P1216">P1216 [USACO1.5][IOI1994]数字三角形 Number Triangles</a></li>
+<li><a href="/problem/P1182">P1182 数列分段 Section II</a></li>
+<li><a href="/problem/P1316">P1316 	丢瓶盖（重题 P1824）</a></li>
+</ul>
+<h2 id="线性数据结构"><a class="headerlink" href="#线性数据结构"></a>线性数据结构</h2>
+<p>数组，链表，队列，栈，都是线性结构。巧用这些结构可以做出不少方便的事情。</p>
+<ul>
+<li><a href="/problem/P1996">P1996 约瑟夫问题</a></li>
+<li><a href="/problem/P1115">P1115 最大子段和</a></li>
+<li><a href="/problem/P1739">P1739 表达式括号匹配</a></li>
+<li><a href="/problem/P1160">P1160 队列安排</a></li>
+<li><a href="/problem/P1449">P1449 后缀表达式</a></li>
+</ul>
+<h2 id="树形数据结构"><a class="headerlink" href="#树形数据结构"></a>树形数据结构</h2>
+<p>由一个根节点分叉，越分越多，就成了树。树可以表示数据之间的从属关系</p>
+<ul>
+<li><a href="/problem/P1087">P1087 FBI树</a></li>
+<li><a href="/problem/P1030">P1030 求先序排列</a></li>
+<li><a href="/problem/P1305">P1305 新二叉树</a></li>
+<li><a href="/problem/P5018">P5018 对称二叉树</a></li>
+</ul>
+<h2 id="动态规划的背包问题"><a class="headerlink" href="#动态规划的背包问题"></a>动态规划的背包问题</h2>
+<p>这是最基础的动态规划。不过如果是第一次接触会有些难以理解。加油闯过这个坎。</p>
+<ul>
+<li><a href="/problem/P1060">P1060 开心的金明</a></li>
+<li><a href="/problem/P1164">P1164 小A点菜</a></li>
+<li><a href="/problem/P1064">P1064 金明的预算方案</a></li>
+<li><a href="/problem/P1048">P1048 采药</a></li>
+<li><a href="/problem/P1049">P1049 装箱问题</a></li>
+<li><a href="/problem/P1616">P1616 疯狂的采药</a></li>
+</ul>
+<h2 id="线性动态规划"><a class="headerlink" href="#线性动态规划"></a>线性动态规划</h2>
+<p>这也是基础的动态规划。是在线性结构上面的动态规划，一定要掌握。</p>
+<ul>
+<li><a href="/problem/P1020">P1020 导弹拦截</a></li>
+<li><a href="/problem/P1091">P1091 合唱队形</a></li>
+<li><a href="/problem/P1280">P1280 尼克的任务</a></li>
+<li><a href="/problem/P1880">P1880 [NOI1995]石子合并</a></li>
+<li><a href="/problem/P1140">P1140 相似基因</a></li>
+<li><a href="/problem/P1282">P1282 多米诺骨牌</a></li>
+</ul>
+<h2 id="多维动态规划"><a class="headerlink" href="#多维动态规划"></a>多维动态规划</h2>
+<p>这里的动态规划就不止一维了。不仅要小心时间复杂度，也要注意空间复杂度。</p>
+<ul>
+<li><a href="/problem/P1508">P1508 Likecloud-吃、吃、吃</a></li>
+<li><a href="/problem/P1006">P1006 传纸条</a></li>
+<li><a href="/problem/P1387">P1387 最大正方形</a></li>
+<li><a href="/problem/P1417">P1417 烹调方案</a></li>
+<li><a href="/problem/P1855">P1855 榨取kkksc03</a></li>
+<li><a href="/problem/P1736">P1736 创意吃鱼法</a></li>
+</ul>
+<h2 id="更要技巧的动规与记忆化"><a class="headerlink" href="#更要技巧的动规与记忆化"></a>更要技巧的动规与记忆化</h2>
+<p>这边的题目有各种搞法。当然有的题目也可以使用记忆化搜索来降低思维难度。</p>
+<ul>
+<li><a href="/problem/P1064">P1064 金明的预算方案</a></li>
+<li><a href="/problem/P1541">P1541 乌龟棋</a></li>
+<li><a href="/problem/P1026">P1026 统计单词个数</a></li>
+<li><a href="/problem/P1063">P1063 能量项链</a></li>
+<li><a href="/problem/P1156">P1156 垃圾陷阱</a></li>
+<li><a href="/problem/P1052">P1052 过河</a></li>
+</ul>
+<h2 id="高精度算法"><a class="headerlink" href="#高精度算法"></a>高精度算法</h2>
+<p>就算是long long（或int64）还不够怎么办？用高精度算法。自己动手丰衣足食。</p>
+<ul>
+<li><a href="/problem/P1601">P1601 A+B Problem（高精）</a></li>
+<li><a href="/problem/P2142">P2142 高精度减法</a></li>
+<li><a href="/problem/P1303">P1303 A*B Problem</a></li>
+<li><a href="/problem/P1255">P1255 数楼梯</a></li>
+<li><a href="/problem/P1604">P1604 B进制星球</a></li>
+</ul>
+<h2 id="贪心EX"><a class="headerlink" href="#贪心EX"></a>贪心EX</h2>
+<p>虽然是贪心题，可能不是你当时你虐着玩的贪心惹qwq</p>
+<ul>
+<li><a href="/problem/P1080">P1080 国王游戏</a></li>
+<li><a href="/problem/P1031">P1031 均分纸牌</a></li>
+<li><a href="/problem/P1233">P1233 木棍加工</a></li>
+<li><a href="/problem/P2123">P2123 皇后游戏</a></li>
+</ul>
+<h2 id="简单数学"><a class="headerlink" href="#简单数学"></a>简单数学</h2>
+<p>数学和oi是密切相关的，数学不仅是oi的基础，而且是算法的核心。</p>
+<ul>
+<li><a href="/problem/P1865">P1865 A % B Problem</a></li>
+<li><a href="/problem/P1372">P1372 又是毕业季I</a></li>
+<li><a href="/problem/P1338">P1338 末日的传说</a></li>
+<li><a href="/problem/P2158">P2158 [SDOI2008]仪仗队</a></li>
+<li><a href="/problem/P1582">P1582 倒水</a></li>
+</ul>
+<h2 id="BOSS战-普及综合练习1"><a class="headerlink" href="#BOSS战-普及综合练习1"></a>BOSS战-普及综合练习1</h2>
+<p>好不容易闯到这一关，你那还等什么呢？抄起家伙赶快上啊！</p>
+<ul>
+<li><a href="/problem/P1478">P1478 陶陶摘苹果（升级版）</a></li>
+<li><a href="/problem/P1203">P1203 [USACO1.1]坏掉的项链Broken Necklace</a></li>
+<li><a href="/problem/P1363">P1363 幻想迷宫</a></li>
+<li><a href="/problem/P1736">P1736 创意吃鱼法</a></li>
+</ul>
+<h2 id="BOSS战-普及综合练习2"><a class="headerlink" href="#BOSS战-普及综合练习2"></a>BOSS战-普及综合练习2</h2>
+<p>来搞定第二个BOSS。虽然战斗艰难，但你一定没有问题。</p>
+<ul>
+<li><a href="/problem/P1201">P1201 [USACO1.1]贪婪的送礼者Greedy Gift Givers</a></li>
+<li><a href="/problem/P1095">P1095 守望者的逃离</a></li>
+<li><a href="/problem/P1058">P1058 立体图</a></li>
+<li><a href="/problem/P2258">P2258 子矩阵</a></li>
+<li><a href="/problem/P1108">P1108 低价购买</a></li>
+</ul>
+<h2 id="BOSS战-普及综合练习3"><a class="headerlink" href="#BOSS战-普及综合练习3"></a>BOSS战-普及综合练习3</h2>
+<p>普及练习场的大BOSS：“一定让你有去无回”。怎么办呢？只能打倒他开启下一个级别！</p>
+<ul>
+<li><a href="/problem/P1328">P1328 生活大爆炸版石头剪刀布</a></li>
+<li><a href="/problem/P1062">P1062 数列</a></li>
+<li><a href="/problem/P1969">P1969 积木大赛</a></li>
+<li><a href="/problem/P1037">P1037 产生数</a></li>
+</ul>
+<h2 id="普及常见模板"><a class="headerlink" href="#普及常见模板"></a>普及常见模板</h2>
+<p>这里集中了比较基础的算法的模板。提高和省选也有模板题哦！</p>
+<ul>
+<li><a href="/problem/P1177">P1177 【模板】快速排序</a></li>
+<li><a href="/problem/P3366">P3366 【模板】最小生成树</a></li>
+<li><a href="/problem/P3367">P3367 【模板】并查集</a></li>
+<li><a href="/problem/P3371">P3371 【模板】单源最短路径（弱化版）</a></li>
+<li><a href="/problem/P3383">P3383 【模板】线性筛素数</a></li>
+</ul>
+<h1>提高历练地</h1>
+<p>已经去除了普及组难度的，请组织放心。成长大牛之必写题！！！</p>
+<h2 id="搜索Ex"><a class="headerlink" href="#搜索Ex"></a>搜索Ex</h2>
+<p>开始提高组的试炼。这里已经去除了所有普及组难度的题目。哼哼，怕了吧。。</p>
+<ul>
+<li><a href="/problem/P1120">P1120 小木棍 ［数据加强版］</a></li>
+<li><a href="/problem/P1378">P1378 油滴扩展</a></li>
+<li><a href="/problem/P1514">P1514 引水入城</a></li>
+<li><a href="/problem/P1312">P1312 Mayan游戏</a></li>
+<li><a href="/problem/P1441">P1441 砝码称重</a></li>
+<li><a href="/problem/P1242">P1242 新汉诺塔</a></li>
+</ul>
+<h2 id="动态规划TG-lv-1"><a class="headerlink" href="#动态规划TG-lv-1"></a><a target="_blank" rel="noopener" href="http://xn--TG-5e5c6v374c082d.lv">动态规划TG.lv</a>(1)</h2>
+<p>这是提高组难度中比较基础的动态规划，也许一两个转移方程就可以写出。</p>
+<ul>
+<li><a href="/problem/P1005">P1005 矩阵取数游戏</a></li>
+<li><a href="/problem/P1373">P1373 小a和uim之大逃离</a></li>
+<li><a href="/problem/P2279">P2279 [HNOI2003]消防局的设立</a></li>
+<li><a href="/problem/P1220">P1220 关路灯</a></li>
+<li><a href="/problem/P1156">P1156 垃圾陷阱</a></li>
+</ul>
+<h2 id="动态规划TG-lv-2"><a class="headerlink" href="#动态规划TG-lv-2"></a><a target="_blank" rel="noopener" href="http://xn--TG-5e5c6v374c082d.lv">动态规划TG.lv</a>(2)</h2>
+<p>这里的动态规划稍稍有所加大难度，思考转移方程的时间可能会与编写程序的时间持平。</p>
+<ul>
+<li><a href="/problem/P1273">P1273 有线电视网</a></li>
+<li><a href="/problem/P1169">P1169 [ZJOI2007]棋盘制作</a></li>
+<li><a href="/problem/P2577">P2577 [ZJOI2005]午餐</a></li>
+<li><a href="/problem/P1070">P1070 道路游戏</a></li>
+<li><a href="/problem/P2051">P2051 [AHOI2009]中国象棋</a></li>
+</ul>
+<h2 id="动态规划TG-lv-3"><a class="headerlink" href="#动态规划TG-lv-3"></a><a target="_blank" rel="noopener" href="http://xn--TG-5e5c6v374c082d.lv">动态规划TG.lv</a>(3)</h2>
+<p>比较需要技巧的动态规划。有的不仅仅需要状态转移方程，可能还会与别的算法综合。</p>
+<ul>
+<li><a href="/problem/P1415">P1415 拆分数列</a></li>
+<li><a href="/problem/P2157">P2157 [SDOI2009]学校食堂</a></li>
+<li><a href="/problem/P2216">P2216 [HAOI2007]理想的正方形</a></li>
+<li><a href="/problem/P2331">P2331 [SCOI2005]最大子矩阵</a></li>
+<li><a href="/problem/P2467">P2467 [SDOI2010]地精部落</a></li>
+<li><a href="/problem/P3084">P3084 [USACO13OPEN]Photo G</a></li>
+</ul>
+<h2 id="数论"><a class="headerlink" href="#数论"></a>数论</h2>
+<p>数论就是研究整数的理论。包括公约公倍数、质数、欧拉定理和同余方程等。</p>
+<ul>
+<li><a href="/problem/P2152">P2152 [SDOI2009]SuperGCD</a></li>
+<li><a href="/problem/P1414">P1414 又是毕业季II</a></li>
+<li><a href="/problem/P1134">P1134 [USACO3.2]阶乘问题</a></li>
+<li><a href="/problem/P1313">P1313 计算系数</a></li>
+<li><a href="/problem/P1306">P1306 斐波那契公约数</a></li>
+</ul>
+<h2 id="博弈论"><a class="headerlink" href="#博弈论"></a>博弈论</h2>
+<p>博弈论考虑游戏中的个体的预测行为和实际行为，并研究它们的优化策略。</p>
+<ul>
+<li><a href="/problem/P1199">P1199 三国游戏</a></li>
+<li><a href="/problem/P1288">P1288 取数游戏II</a></li>
+<li><a href="/problem/P1290">P1290 欧几里德的游戏</a></li>
+<li><a href="/problem/P2148">P2148 [SDOI2009]E&amp;D</a></li>
+<li><a href="/problem/P1247">P1247 取火柴游戏</a></li>
+<li><a href="/problem/P2575">P2575 高手过招</a></li>
+</ul>
+<h2 id="其他数学问题"><a class="headerlink" href="#其他数学问题"></a>其他数学问题</h2>
+<p>听说学oi的同志们数学都挺好。那么。就请完成下面的题目证明这一点吧！</p>
+<ul>
+<li><a href="/problem/P1357">P1357 花园</a></li>
+<li><a href="/problem/P1641">P1641 [SCOI2010]生成字符串</a></li>
+<li><a href="/problem/P2059">P2059 [JLOI2013]卡牌游戏</a></li>
+<li><a href="/problem/P2154">P2154 [SDOI2009]虔诚的墓主人</a></li>
+<li><a href="/problem/P2261">P2261 [CQOI2007]余数求和</a></li>
+<li><a href="/problem/P2327">P2327 [SCOI2005]扫雷</a></li>
+<li><a href="/problem/P1066">P1066 2^k进制数</a></li>
+</ul>
+<h2 id="图的遍历"><a class="headerlink" href="#图的遍历"></a>图的遍历</h2>
+<p>图是一种非常重要的数据结构，描述对象复杂的练习。这里开始接触图的基本概念。</p>
+<ul>
+<li><a href="/problem/P2661">P2661 信息传递</a></li>
+<li><a href="/problem/P1330">P1330 封锁阳光大学</a></li>
+<li><a href="/problem/P1341">P1341 无序字母对</a></li>
+<li><a href="/problem/P2921">P2921 [USACO08DEC]Trick or Treat on the Farm G</a></li>
+</ul>
+<h2 id="最短路问题"><a class="headerlink" href="#最短路问题"></a>最短路问题</h2>
+<p>最短路是图论中最重要的部分，多种算法可以应用。很多题目都可以抽象成这种模型。</p>
+<ul>
+<li><a href="/problem/P1339">P1339 [USACO09OCT]Heat Wave G</a></li>
+<li><a href="/problem/P1462">P1462 通往奥格瑞玛的道路</a></li>
+<li><a href="/problem/P1346">P1346 电车</a></li>
+<li><a href="/problem/P1119">P1119 灾后重建</a></li>
+<li><a href="/problem/P1144">P1144 最短路计数</a></li>
+<li><a href="/problem/P1522">P1522 [USACO2.4]牛的旅行 Cow Tours</a></li>
+</ul>
+<h2 id="最小生成树"><a class="headerlink" href="#最小生成树"></a>最小生成树</h2>
+<p>最小生成树可以用kruskal（克鲁斯卡尔）算法或prim（普里姆）算法求出。</p>
+<ul>
+<li><a href="/problem/P1546">P1546 [USACO3.1]最短网络 Agri-Net</a></li>
+<li><a href="/problem/P2330">P2330 [SCOI2005]繁忙的都市</a></li>
+<li><a href="/problem/P1991">P1991 无线通讯网</a></li>
+<li><a href="/problem/P1265">P1265 公路修建</a></li>
+</ul>
+<h2 id="较复杂图论I"><a class="headerlink" href="#较复杂图论I"></a>较复杂图论I</h2>
+<p>别的些图论问题，包括树、拓扑排序等。要过这一关，需要学习不少新的算法。</p>
+<ul>
+<li><a href="/problem/P1113">P1113 杂务</a></li>
+<li><a href="/problem/P1268">P1268 树的重量</a></li>
+<li><a href="/problem/P1525">P1525 关押罪犯</a></li>
+<li><a href="/problem/P1983">P1983 车站分级</a></li>
+</ul>
+<h2 id="较复杂图论II"><a class="headerlink" href="#较复杂图论II"></a>较复杂图论II</h2>
+<p>更高级的图论算法。包括差分约束、强连通、二分图等。会更难一些。</p>
+<ul>
+<li><a href="/problem/P1993">P1993 小K的农场</a></li>
+<li><a href="/problem/P1726">P1726 上白泽慧音</a></li>
+<li><a href="/problem/P2055">P2055 [ZJOI2009]假期的宿舍</a></li>
+<li><a href="/problem/P2149">P2149 [SDOI2009]Elaxia的路线</a></li>
+<li><a href="/problem/P1345">P1345 [USACO5.4]奶牛的电信Telecowmunication</a></li>
+</ul>
+<h2 id="并查集"><a class="headerlink" href="#并查集"></a>并查集</h2>
+<p>用于处理一些不相交集合的合并及查询问题。常常在使用中以森林来表示。</p>
+<ul>
+<li><a href="/problem/P1111">P1111 修复公路</a></li>
+<li><a href="/problem/P2024">P2024 [NOI2001]食物链</a></li>
+<li><a href="/problem/P1197">P1197 [JSOI2008]星球大战</a></li>
+<li><a href="/problem/P1196">P1196 [NOI2002]银河英雄传说</a></li>
+</ul>
+<h2 id="堆"><a class="headerlink" href="#堆"></a>堆</h2>
+<p>堆总是一棵完全树；堆中某个节点的值总是不大于或不小于其父节点的值。</p>
+<ul>
+<li><a href="/problem/P1801">P1801 黑匣子</a></li>
+<li><a href="/problem/P2278">P2278 [HNOI2003]操作系统</a></li>
+<li><a href="/problem/P1631">P1631 序列合并</a></li>
+<li><a href="/problem/P2085">P2085 最小函数值</a></li>
+<li><a href="/problem/P1484">P1484 种树</a></li>
+</ul>
+<h2 id="线段树树状数组基础"><a class="headerlink" href="#线段树树状数组基础"></a>线段树树状数组基础</h2>
+<p>这都是比较高级的线性数据结构。在处理一些询问与修改线性问题时，是很好用的。</p>
+<ul>
+<li><a href="/problem/P1972">P1972 [SDOI2009]HH的项链</a></li>
+<li><a href="/problem/P1198">P1198 [JSOI2008]最大数</a></li>
+<li><a href="/problem/P2023">P2023 [AHOI2009] 维护序列</a></li>
+<li><a href="/problem/P2161">P2161 [SHOI2009]会场预约</a></li>
+</ul>
+<h2 id="神奇的解法"><a class="headerlink" href="#神奇的解法"></a>神奇的解法</h2>
+<p>有些问题刚开始觉得无从下手。好好想一想，尽量别看题解，否则你会大呼“简单”。</p>
+<ul>
+<li><a href="/problem/P1007">P1007 独木桥</a></li>
+<li><a href="/problem/P1984">P1984 [SDOI2008]烧水问题</a></li>
+<li><a href="/problem/P2022">P2022 有趣的数</a></li>
+<li><a href="/problem/P2320">P2320 [HNOI2006]鬼谷子的钱袋</a></li>
+</ul>
+<h2 id="倍增"><a class="headerlink" href="#倍增"></a>倍增</h2>
+<p>一种特殊的枚举算法，但可大大加快效率。近年noip有考到。难度较大。</p>
+<ul>
+<li><a href="/problem/P1967">P1967 货车运输</a></li>
+<li><a href="/problem/P1081">P1081 开车旅行</a></li>
+<li><a href="/problem/P1613">P1613 跑路</a></li>
+</ul>
+<h2 id="强连通分量"><a class="headerlink" href="#强连通分量"></a>强连通分量</h2>
+<p>强连通分量</p>
+<ul>
+<li><a href="/problem/P2341">P2341 [USACO03FALL][HAOI2006]受欢迎的牛 G</a></li>
+<li><a href="/problem/P3469">P3469 [POI2008]BLO-Blockade</a></li>
+<li><a href="/problem/P2746">P2746 [USACO5.3]校园网Network of Schools</a></li>
+<li><a href="/problem/P3119">P3119 [USACO15JAN]Grass Cownoisseur G</a></li>
+<li><a href="/problem/P3225">P3225 [HNOI2012]矿场搭建</a></li>
+</ul>
+<h2 id="BOSS战-提高综合练习1"><a class="headerlink" href="#BOSS战-提高综合练习1"></a>BOSS战-提高综合练习1</h2>
+<p>年轻人，又是个送上门的，让我来看看你真实的本领。啊哈哈哈哈哈！</p>
+<ul>
+<li><a href="/problem/P2264">P2264 情书</a></li>
+<li><a href="/problem/P1772">P1772 [ZJOI2006]物流运输</a></li>
+<li><a href="/problem/P1083">P1083 借教室</a></li>
+<li><a href="/problem/P1979">P1979 华容道</a></li>
+<li><a href="/problem/P2939">P2939 [USACO09FEB]Revamping Trails G</a></li>
+</ul>
+<h2 id="BOSS战-提高综合练习2"><a class="headerlink" href="#BOSS战-提高综合练习2"></a>BOSS战-提高综合练习2</h2>
+<p>再来！这里有的题目并非单纯的考察某个算法，而是考察一种综合性的思维。</p>
+<ul>
+<li><a href="/problem/P1901">P1901 发射站</a></li>
+<li><a href="/problem/P1314">P1314 聪明的质监员</a></li>
+<li><a href="/problem/P2144">P2144 [FJOI2007]轮状病毒</a></li>
+<li><a href="/problem/P1073">P1073 最优贸易</a></li>
+<li><a href="/problem/P2324">P2324 [SCOI2005]骑士精神</a></li>
+</ul>
+<h2 id="BOSS战-提高综合练习3"><a class="headerlink" href="#BOSS战-提高综合练习3"></a>BOSS战-提高综合练习3</h2>
+<p>既然已经打倒了前面2个boss，那么第3个也是没有问题的。少年，来吧！</p>
+<ul>
+<li><a href="/problem/P1965">P1965 转圈游戏</a></li>
+<li><a href="/problem/P1311">P1311 选择客栈<br />
+</a></li>
+<li><a href="/problem/P2296">P2296 寻找道路</a></li>
+<li><a href="/problem/P1084">P1084 疫情控制</a></li>
+</ul>
+<h2 id="提高模板-nlogn数据结构"><a class="headerlink" href="#提高模板-nlogn数据结构"></a>提高模板-nlogn数据结构</h2>
+<p>虽然这些算法不是noip必须的，但是不算困难，很多题目可以使用这些方法。</p>
+<ul>
+<li><a href="/problem/P3374">P3374 【模板】树状数组 1</a></li>
+<li><a href="/problem/P3368">P3368 【模板】树状数组 2</a></li>
+<li><a href="/problem/P3372">P3372 【模板】线段树 1</a></li>
+<li><a href="/problem/P3373">P3373 【模板】线段树 2</a></li>
+<li><a href="/problem/P1439">P1439 【模板】最长公共子序列</a></li>
+<li><a href="/problem/P3378">P3378 【模板】堆</a></li>
+</ul>
+<h1>省选斗兽场/NOI神殿</h1>
+<p>为省选及以上选手制作的训练场。其实，省选水平的oier不需要一些外加的刷题列表，本栏仅供参考，也欢迎各位指出不足。</p>
+<h2 id="省选基础-读入-输出优化"><a class="headerlink" href="#省选基础-读入-输出优化"></a>省选基础-读入/输出优化</h2>
+<p>读入/输出优化是省选刷题时必要的一个东西，这里给出了几题，需要自己手写相应的读入输出处理。作为第一关，这一关相对简单。</p>
+<ul>
+<li><a href="/problem/P1580">P1580 yyy loves Easter_Egg I</a></li>
+<li><a href="/problem/P2393">P2393 yyy loves Maths II</a></li>
+<li><a href="/problem/P2394">P2394 yyy loves Chemistry I</a></li>
+</ul>
+<h2 id="省选基础-位运算"><a class="headerlink" href="#省选基础-位运算"></a>省选基础-位运算</h2>
+<p>位运算往往在必要的时候,能带你优化一下常数,也许是空间;也许是时间;有的时候这样可以多过很多分</p>
+<ul>
+<li><a href="/problem/P2114">P2114 [NOI2014]起床困难综合症</a></li>
+<li><a href="/problem/P2396">P2396 yyy loves Maths VII</a></li>
+<li><a href="/problem/P2397">P2397 yyy loves Maths VI (mode)</a></li>
+</ul>
+<h2 id="省选基础-打表"><a class="headerlink" href="#省选基础-打表"></a>省选基础-打表</h2>
+<p>打表虽然很赖皮,而且基本都是非正解,但是这种办法能让我们在省选中拿到一些会超时或者会超空间的一些数据点</p>
+<ul>
+<li><a href="/problem/P1149">P1149 火柴棒等式</a></li>
+<li><a href="/problem/P1463">P1463 [POI2002][HAOI2007]反素数</a></li>
+<li><a href="/problem/P1896">P1896 [SCOI2005]互不侵犯</a></li>
+</ul>
+<h2 id="动态规划1"><a class="headerlink" href="#动态规划1"></a>动态规划1</h2>
+<p>动态规划</p>
+<ul>
+<li><a href="/problem/P2051">P2051 [AHOI2009]中国象棋</a></li>
+<li><a href="/problem/P1879">P1879 [USACO06NOV]Corn Fields G</a></li>
+<li><a href="/problem/P1850">P1850 换教室</a></li>
+<li><a href="/problem/P2831">P2831 愤怒的小鸟</a></li>
+<li><a href="/problem/P1131">P1131 [ZJOI2007]时态同步</a></li>
+<li><a href="/problem/P1169">P1169 [ZJOI2007]棋盘制作</a></li>
+</ul>
+<h2 id="动态规划2"><a class="headerlink" href="#动态规划2"></a>动态规划2</h2>
+<p>动态规划</p>
+<ul>
+<li><a href="/problem/P1273">P1273 有线电视网</a></li>
+<li><a href="/problem/P3648">P3648 [APIO2014]序列分割</a></li>
+<li><a href="/problem/P2519">P2519 [HAOI2011]problem a</a></li>
+<li><a href="/problem/P2515">P2515 [HAOI2010]软件安装</a></li>
+<li><a href="/problem/P3233">P3233 [HNOI2014]世界树</a></li>
+<li><a href="/problem/P2501">P2501 [HAOI2006]数字序列</a></li>
+</ul>
+<h2 id="网络流——最大流"><a class="headerlink" href="#网络流——最大流"></a>网络流——最大流</h2>
+<p>最大流</p>
+<ul>
+<li><a href="/problem/P2765">P2765 魔术球问题</a></li>
+<li><a href="/problem/P2764">P2764 最小路径覆盖问题</a></li>
+<li><a href="/problem/P2763">P2763 试题库问题</a></li>
+<li><a href="/problem/P2766">P2766 最长不下降子序列问题</a></li>
+<li><a href="/problem/P2774">P2774 方格取数问题</a></li>
+<li><a href="/problem/P2805">P2805 [NOI2009]植物大战僵尸</a></li>
+</ul>
+<h2 id="网络流——费用流"><a class="headerlink" href="#网络流——费用流"></a>网络流——费用流</h2>
+<p>费用流</p>
+<ul>
+<li><a href="/problem/P2153">P2153 [SDOI2009]晨跑</a></li>
+<li><a href="/problem/P2053">P2053 [SCOI2007]修车</a></li>
+<li><a href="/problem/P3159">P3159 [CQOI2012]交换棋子</a></li>
+<li><a href="/problem/P2604">P2604 [ZJOI2010]网络扩容</a></li>
+<li><a href="/problem/P2050">P2050 [NOI2012]美食节</a></li>
+<li><a href="/problem/P3980">P3980 [NOI2008]志愿者招募</a></li>
+</ul>
+<h2 id="单调队列"><a class="headerlink" href="#单调队列"></a>单调队列</h2>
+<p>单调队列</p>
+<ul>
+<li><a href="/problem/P2698">P2698 [USACO12MAR]Flowerpot S</a></li>
+<li><a href="/problem/P2216">P2216 [HAOI2007]理想的正方形</a></li>
+<li><a href="/problem/P2219">P2219 [HAOI2007]修筑绿化带</a></li>
+<li><a href="/problem/P2564">P2564 [SCOI2009]生日礼物</a></li>
+<li><a href="/problem/P2569">P2569 [SCOI2010]股票交易</a></li>
+</ul>
+<h2 id="概率期望"><a class="headerlink" href="#概率期望"></a>概率期望</h2>
+<p>概率期望</p>
+<ul>
+<li><a href="/problem/P2473">P2473 [SCOI2008] 奖励关</a></li>
+<li><a href="/problem/P2221">P2221 [HAOI2012]高速公路</a></li>
+<li><a href="/problem/P3317">P3317 [SDOI2014]重建</a></li>
+<li><a href="/problem/P3343">P3343 [ZJOI2015]地震后的幻想乡</a></li>
+<li><a href="/problem/P3600">P3600 随机数生成器</a></li>
+<li><a href="/problem/P3830">P3830 [SHOI2012]随机树</a></li>
+</ul>
+<h2 id="二分图"><a class="headerlink" href="#二分图"></a>二分图</h2>
+<p>二分图</p>
+<ul>
+<li><a href="/problem/P3386">P3386 【模板】二分图最大匹配</a></li>
+<li><a href="/problem/P1640">P1640 [SCOI2010]连续攻击游戏</a></li>
+<li><a href="/problem/P1129">P1129 [ZJOI2007]矩阵游戏</a></li>
+<li><a href="/problem/P1963">P1963 [NOI2009]变换序列</a></li>
+<li><a href="/problem/P3231">P3231 [HNOI2013]消毒</a></li>
+<li><a href="/problem/P2526">P2526 [SHOI2001]小狗散步</a></li>
+</ul>
+<h2 id="点分治"><a class="headerlink" href="#点分治"></a>点分治</h2>
+<p>点分治</p>
+<ul>
+<li><a href="/problem/P2634">P2634 [国家集训队]聪聪可可</a></li>
+<li><a href="/problem/P2664">P2664 树上游戏</a></li>
+<li><a href="/problem/P3806">P3806 【模板】点分治1</a></li>
+<li><a href="/problem/P3676">P3676 小清新数据结构题</a></li>
+</ul>
+<h2 id="后缀数组"><a class="headerlink" href="#后缀数组"></a>后缀数组</h2>
+<p>后缀数组</p>
+<ul>
+<li><a href="/problem/P3809">P3809 【模板】后缀排序</a></li>
+<li><a href="/problem/P1117">P1117 [NOI2016]优秀的拆分</a></li>
+<li><a href="/problem/P2178">P2178 [NOI2015]品酒大会</a></li>
+<li><a href="/problem/P2463">P2463 [SDOI2008]Sandy的卡片</a></li>
+<li><a href="/problem/P2336">P2336 [SCOI2012]喵星球上的点名</a></li>
+</ul>
+<h2 id="主席树"><a class="headerlink" href="#主席树"></a>主席树</h2>
+<p>主席树</p>
+<ul>
+<li><a href="/problem/P2468">P2468 [SDOI2010]粟粟的书架</a></li>
+<li><a href="/problem/P3157">P3157 [CQOI2011]动态逆序对</a></li>
+<li><a href="/problem/P3302">P3302 [SDOI2013]森林</a></li>
+<li><a href="/problem/P3168">P3168 [CQOI2015]任务查询系统</a></li>
+<li><a href="/problem/P3313">P3313 [SDOI2014]旅行</a></li>
+</ul>
+<h2 id="数位DP"><a class="headerlink" href="#数位DP"></a>数位DP</h2>
+<p>数位DP</p>
+<ul>
+<li><a href="/problem/P2602">P2602 [ZJOI2010]数字计数</a></li>
+<li><a href="/problem/P3281">P3281 [SCOI2013]数数</a></li>
+<li><a href="/problem/P2518">P2518 [HAOI2010]计数</a></li>
+<li><a href="/problem/P2606">P2606 [ZJOI2010]排列计数</a></li>
+</ul>
+<h2 id="AC自动机"><a class="headerlink" href="#AC自动机"></a>AC自动机</h2>
+<p>AC自动机</p>
+<ul>
+<li><a href="/problem/P3808">P3808 【模板】AC自动机（简单版）</a></li>
+<li><a href="/problem/P3796">P3796 【模板】AC自动机（加强版）</a></li>
+<li><a href="/problem/P2444">P2444 [POI2000]病毒</a></li>
+<li><a href="/problem/P2414">P2414 [NOI2011]阿狸的打字机</a></li>
+</ul>
+<h2 id="平衡树"><a class="headerlink" href="#平衡树"></a>平衡树</h2>
+<p>平衡树</p>
+<ul>
+<li><a href="/problem/P2042">P2042 [NOI2005]维护数列</a></li>
+<li><a href="/problem/P2596">P2596 [ZJOI2006]书架</a></li>
+<li><a href="/problem/P1110">P1110 [ZJOI2007]报表统计</a></li>
+<li><a href="/problem/P3285">P3285 [SCOI2014]方伯伯的OJ</a></li>
+<li><a href="/problem/P3644">P3644 [APIO2015]八邻旁之桥</a></li>
+<li><a href="/problem/P3765">P3765 总统选举</a></li>
+<li><a href="/problem/P3369">P3369 【模板】普通平衡树</a></li>
+</ul>
+<h2 id="树链剖分"><a class="headerlink" href="#树链剖分"></a>树链剖分</h2>
+<p>树链剖分</p>
+<ul>
+<li><a href="/problem/P2590">P2590 [ZJOI2008]树的统计</a></li>
+<li><a href="/problem/P2486">P2486 [SDOI2011]染色</a></li>
+<li><a href="/problem/P2146">P2146 [NOI2015]软件包管理器</a></li>
+<li><a href="/problem/P3258">P3258 [JLOI2014]松鼠的新家</a></li>
+<li><a href="/problem/P3178">P3178 [HAOI2015]树上操作</a></li>
+</ul>
+<h2 id="动态树"><a class="headerlink" href="#动态树"></a>动态树</h2>
+<p>动态树</p>
+<ul>
+<li><a href="/problem/P3690">P3690 【模板】Link Cut Tree （动态树）</a></li>
+<li><a href="/problem/P2387">P2387 [NOI2014]魔法森林</a></li>
+<li><a href="/problem/P3203">P3203 [HNOI2010]弹飞绵羊</a></li>
+<li><a href="/problem/P3348">P3348 [ZJOI2016]大森林</a></li>
+</ul>
+<h2 id="树套树"><a class="headerlink" href="#树套树"></a>树套树</h2>
+<p>树套树</p>
+<ul>
+<li><a href="/problem/P1903">P1903 [国家集训队]数颜色 / 维护队列</a></li>
+<li><a href="/problem/P3157">P3157 [CQOI2011]动态逆序对</a></li>
+<li><a href="/problem/P3332">P3332 [ZJOI2013]K大数查询</a></li>
+<li><a href="/problem/P2166">P2166 Gty的超级妹子树</a></li>
+<li><a href="/problem/P3380">P3380 【模板】二逼平衡树（树套树）</a></li>
+<li><a href="/problem/P2137">P2137 Gty的妹子树</a></li>
+<li><a href="/problem/P3759">P3759 [TJOI2017]不勤劳的图书管理员</a></li>
+</ul>
+<h2 id="可持久化Trie树"><a class="headerlink" href="#可持久化Trie树"></a>可持久化Trie树</h2>
+<p>可持久化Trie树</p>
+<ul>
+<li><a href="/problem/P2048">P2048 [NOI2010]超级钢琴</a></li>
+<li><a href="/problem/P3527">P3527 [POI2011]MET-Meteors</a></li>
+<li><a href="/problem/P3302">P3302 [SDOI2013]森林</a></li>
+<li><a href="/problem/P3168">P3168 [CQOI2015]任务查询系统</a></li>
+<li><a href="/problem/P3242">P3242 [HNOI2015]接水果</a></li>
+<li><a href="/problem/P3241">P3241 [HNOI2015]开店</a></li>
+<li><a href="/problem/P3293">P3293 [SCOI2016]美味</a></li>
+</ul>
+<h2 id="莫队算法"><a class="headerlink" href="#莫队算法"></a>莫队算法</h2>
+<p>莫队算法</p>
+<ul>
+<li><a href="/problem/P1972">P1972 [SDOI2009]HH的项链</a></li>
+<li><a href="/problem/P2336">P2336 [SCOI2012]喵星球上的点名</a></li>
+<li><a href="/problem/P3709">P3709 大爷的字符串题</a></li>
+<li><a href="/problem/P2709">P2709 小B的询问</a></li>
+<li><a href="/problem/P3674">P3674 小清新人渣的本愿</a></li>
+</ul>
+<h2 id="分块"><a class="headerlink" href="#分块"></a>分块</h2>
+<p>分块</p>
+<ul>
+<li><a href="/problem/P1972">P1972 [SDOI2009]HH的项链</a></li>
+<li><a href="/problem/P3396">P3396 哈希冲突</a></li>
+<li><a href="/problem/P1822">P1822 魔法指纹</a></li>
+<li><a href="/problem/P2801">P2801 教主的魔法</a></li>
+<li><a href="/problem/P3203">P3203 [HNOI2010]弹飞绵羊</a></li>
+</ul>
+<h2 id="莫比乌斯反演"><a class="headerlink" href="#莫比乌斯反演"></a>莫比乌斯反演</h2>
+<p>莫比乌斯反演</p>
+<ul>
+<li><a href="/problem/P3768">P3768 简单的数学题</a></li>
+<li><a href="/problem/P3172">P3172 [CQOI2015]选数</a></li>
+<li><a href="/problem/P3455">P3455 [POI2007]ZAP-Queries</a></li>
+<li><a href="/problem/P2522">P2522 [HAOI2011]Problem b</a></li>
+<li><a href="/problem/P3327">P3327 [SDOI2015]约数个数和</a></li>
+</ul>
+<h2 id="其他"><a class="headerlink" href="#其他"></a>其他</h2>
+<p>其他</p>
+<ul>
+<li><a href="/problem/P3377">P3377 【模板】左偏树（可并堆）</a></li>
+<li><a href="/problem/P3261">P3261 [JLOI2015]城池攻占</a></li>
+<li><a href="/problem/P3382">P3382 【模板】三分法</a></li>
+<li><a href="/problem/P2571">P2571 [SCOI2010]传送带</a></li>
+<li><a href="/problem/P3222">P3222 [HNOI2012]射箭</a></li>
+<li><a href="/problem/P3187">P3187 [HNOI2007]最小矩形覆盖</a></li>
+<li><a href="/problem/P3199">P3199 [HNOI2009]最小圈</a></li>
+<li><a href="/problem/P3292">P3292 [SCOI2016]幸运数字</a></li>
+<li><a href="/problem/P2824">P2824 [HEOI2016/TJOI2016]排序</a></li>
+<li><a href="/problem/P3285">P3285 [SCOI2014]方伯伯的OJ</a></li>
+<li><a href="/problem/P1552">P1552 [APIO2012]派遣</a></li>
+</ul>
+<h1>USACO</h1>
+<p>美国经典的算法练习题库，值得一刷</p>
+<h2 id="USACO-Section-1-1"><a class="headerlink" href="#USACO-Section-1-1"></a>USACO Section 1.1</h2>
+<ul>
+<li><a href="/problem/P1200">P1200 [USACO1.1]你的飞碟在这儿Your Ride Is Here</a></li>
+<li><a href="/problem/P1201">P1201 [USACO1.1]贪婪的送礼者Greedy Gift Givers</a></li>
+<li><a href="/problem/P1202">P1202 [USACO1.1]黑色星期五Friday the Thirteenth</a></li>
+<li><a href="/problem/P1203">P1203 [USACO1.1]坏掉的项链Broken Necklace</a></li>
+</ul>
+<h2 id="USACO-Section-1-2"><a class="headerlink" href="#USACO-Section-1-2"></a>USACO Section 1.2</h2>
+<p>完全枚举</p>
+<ul>
+<li><a href="/problem/P3864">P3864 [USACO1.2]命名那个数字 Name That Number</a></li>
+<li><a href="/problem/P1204">P1204 [USACO1.2]挤牛奶Milking Cows</a></li>
+<li><a href="/problem/P1205">P1205 [USACO1.2]方块转换 Transformations</a></li>
+<li><a href="/problem/P1206">P1206 [USACO1.2]回文平方数 Palindromic Squares</a></li>
+<li><a href="/problem/P1207">P1207 [USACO1.2]双重回文数 Dual Palindromes</a></li>
+</ul>
+<h2 id="USACO-Section-1-3"><a class="headerlink" href="#USACO-Section-1-3"></a>USACO Section 1.3</h2>
+<p>贪心</p>
+<ul>
+<li><a href="/problem/P1208">P1208 [USACO1.3]混合牛奶 Mixing Milk</a></li>
+<li><a href="/problem/P1209">P1209 [USACO1.3]修理牛棚 Barn Repair</a></li>
+<li><a href="/problem/P1211">P1211 [USACO1.3]牛式 Prime Cryptarithm</a></li>
+<li><a href="/problem/P1444">P1444 [USACO1.3]虫洞 wormhole</a></li>
+<li><a href="/problem/P3650">P3650 [USACO1.3]滑雪课程设计Ski Course Design</a></li>
+<li><a href="/problem/P2693">P2693 [USACO1.3]号码锁 Combination Lock</a></li>
+</ul>
+<h2 id="USACO-Section-1-4"><a class="headerlink" href="#USACO-Section-1-4"></a>USACO Section 1.4</h2>
+<p>有技巧的枚举</p>
+<ul>
+<li><a href="/problem/P1214">P1214 [USACO1.4]等差数列 Arithmetic Progressions</a></li>
+<li><a href="/problem/P1215">P1215 [USACO1.4]母亲的牛奶 Mother’s Milk</a></li>
+</ul>
+<h2 id="USACO-Section-1-5"><a class="headerlink" href="#USACO-Section-1-5"></a>USACO Section 1.5</h2>
+<p>二进制数</p>
+<ul>
+<li><a href="/problem/P1216">P1216 [USACO1.5][IOI1994]数字三角形 Number Triangles</a></li>
+<li><a href="/problem/P1217">P1217 [USACO1.5]回文质数 Prime Palindromes</a></li>
+<li><a href="/problem/P1218">P1218 [USACO1.5]特殊的质数肋骨 Superprime Rib</a></li>
+</ul>
+<h2 id="USACO-Section-2-1"><a class="headerlink" href="#USACO-Section-2-1"></a>USACO Section 2.1</h2>
+<p>图论和洪水填充</p>
+<ul>
+<li><a href="/problem/P1457">P1457 [USACO2.1]城堡 The Castle</a></li>
+<li><a href="/problem/P1458">P1458 [USACO2.1]顺序的分数 Ordered Fractions</a></li>
+<li><a href="/problem/P1459">P1459 [USACO2.1]三值的排序 Sorting a Three-Valued Sequence</a></li>
+<li><a href="/problem/P1460">P1460 [USACO2.1]健康的荷斯坦奶牛 Healthy Holsteins</a></li>
+<li><a href="/problem/P1461">P1461 [USACO2.1]海明码 Hamming Codes</a></li>
+</ul>
+<h2 id="USACO-Section-2-2"><a class="headerlink" href="#USACO-Section-2-2"></a>USACO Section 2.2</h2>
+<p>数据结构与动态规划</p>
+<ul>
+<li><a href="/problem/P1465">P1465 [USACO2.2]序言页码 Preface Numbering</a></li>
+<li><a href="/problem/P1466">P1466 [USACO2.2]集合 Subset Sums</a></li>
+<li><a href="/problem/P1467">P1467 [USACO2.2]循环数 Runaround Numbers</a></li>
+<li><a href="/problem/P1468">P1468 [USACO2.2]派对灯 Party Lamps</a></li>
+</ul>
+<h2 id="USACO-Section-2-3"><a class="headerlink" href="#USACO-Section-2-3"></a>USACO Section 2.3</h2>
+<ul>
+<li><a href="/problem/P1470">P1470 [USACO2.3]最长前缀 Longest Prefix</a></li>
+<li><a href="/problem/P1472">P1472 [USACO2.3]奶牛家谱 Cow Pedigrees</a></li>
+<li><a href="/problem/P1473">P1473 [USACO2.3]零的数列 Zero Sum</a></li>
+<li><a href="/problem/P1474">P1474 [USACO2.3]Money System / [USACO07OCT]Cow Cash G</a></li>
+<li><a href="/problem/P1475">P1475 [USACO2.3]控制公司 Controlling Companies</a></li>
+</ul>
+<h2 id="USACO-Section-2-4"><a class="headerlink" href="#USACO-Section-2-4"></a>USACO Section 2.4</h2>
+<p>最短路径</p>
+<ul>
+<li><a href="/problem/P1518">P1518 [USACO2.4]两只塔姆沃斯牛 The Tamworth Two</a></li>
+<li><a href="/problem/P1519">P1519 [USACO2.4]穿越栅栏 Overfencing</a></li>
+<li><a href="/problem/P1522">P1522 [USACO2.4] 牛的旅行 Cow Tours</a></li>
+<li><a href="/problem/P1529">P1529 [USACO2.4]回家 Bessie Come Home</a></li>
+<li><a href="/problem/P1530">P1530 [USACO2.4]分数化小数 Fractions to Decimals</a></li>
+</ul>
+<h2 id="USACO-Section-3-1"><a class="headerlink" href="#USACO-Section-3-1"></a>USACO Section 3.1</h2>
+<p>最小生成树</p>
+<ul>
+<li><a href="/problem/P1546">P1546 [USACO3.1]最短网络 Agri-Net</a></li>
+<li><a href="/problem/P2722">P2722 [USACO3.1]总分 Score Inflation</a></li>
+<li><a href="/problem/P2723">P2723 [USACO3.1]丑数 Humble Numbers</a></li>
+<li><a href="/problem/P2724">P2724 [USACO3.1]联系 Contact</a></li>
+<li><a href="/problem/P2725">P2725 [USACO3.1]邮票 Stamps</a></li>
+</ul>
+<h2 id="USACO-Section-3-2"><a class="headerlink" href="#USACO-Section-3-2"></a>USACO Section 3.2</h2>
+<p>背包问题</p>
+<ul>
+<li><a href="/problem/P1134">P1134 [USACO3.2]阶乘问题</a></li>
+<li><a href="/problem/P2727">P2727 [USACO3.2]01串 Stringsobits</a></li>
+<li><a href="/problem/P2728">P2728 [USACO3.2]纺车的轮子 Spinning Wheels</a></li>
+<li><a href="/problem/P2729">P2729 [USACO3.2]饲料调配 Feed Ratios</a></li>
+<li><a href="/problem/P2730">P2730 [USACO3.2]魔板 Magic Squares</a></li>
+<li><a href="/problem/P1828">P1828 [USACO3.2]香甜的黄油 Sweet Butter</a></li>
+</ul>
+<h2 id="USACO-Section-3-3"><a class="headerlink" href="#USACO-Section-3-3"></a>USACO Section 3.3</h2>
+<p>欧拉回路</p>
+<ul>
+<li><a href="/problem/P2731">P2731 [USACO3.3]骑马修栅栏 Riding the Fences</a></li>
+<li><a href="/problem/P2732">P2732 [USACO3.3]商店购物 Shopping Offers</a></li>
+<li><a href="/problem/P1930">P1930 [USACO3.3]亚瑟王的宫殿</a></li>
+<li><a href="/problem/P2733">P2733 [USACO3.3]家的范围 Home on the Range</a></li>
+<li><a href="/problem/P2734">P2734 [USACO3.3]游戏 A Game</a></li>
+</ul>
+<h2 id="USACO-Section-3-4"><a class="headerlink" href="#USACO-Section-3-4"></a>USACO Section 3.4</h2>
+<p>计算几何</p>
+<ul>
+<li><a href="/problem/P1827">P1827 [USACO3.4] 美国血统 American Heritage</a></li>
+<li><a href="/problem/P2735">P2735 [USACO3.4]网 Electric Fences</a></li>
+<li><a href="/problem/P2736">P2736 [USACO3.4]“破锣摇滚”乐队 Raucous Rockers</a></li>
+</ul>
+<h2 id="USACO-Section-4-1"><a class="headerlink" href="#USACO-Section-4-1"></a>USACO Section 4.1</h2>
+<p>最优化</p>
+<ul>
+<li><a href="/problem/P2737">P2737 [USACO4.1]麦香牛块Beef McNuggets</a></li>
+<li><a href="/problem/P2738">P2738 [USACO4.1]篱笆回路Fence Loops</a></li>
+</ul>
+<h2 id="USACO-Section-4-2"><a class="headerlink" href="#USACO-Section-4-2"></a>USACO Section 4.2</h2>
+<p>网络流</p>
+<ul>
+<li><a href="/problem/P2740">P2740 [USACO4.2]草地排水Drainage Ditches</a></li>
+<li><a href="/problem/P1894">P1894 [USACO4.2]完美的牛栏The Perfect Stall</a></li>
+<li><a href="/problem/P2751">P2751 [USACO4.2]工序安排Job Processing</a></li>
+</ul>
+<h2 id="USACO-Section-4-3"><a class="headerlink" href="#USACO-Section-4-3"></a>USACO Section 4.3</h2>
+<p>高精度</p>
+<ul>
+<li><a href="/problem/P2687">P2687 [USACO4.3]逢低吸纳Buy Low, Buy Lower</a></li>
+<li><a href="/problem/P2752">P2752 [USACO4.3]街道赛跑Street Race</a></li>
+<li><a href="/problem/P2753">P2753 [USACO4.3]字母游戏Letter Game</a></li>
+</ul>
+<h2 id="USACO-Section-4-4"><a class="headerlink" href="#USACO-Section-4-4"></a>USACO Section 4.4</h2>
+<ul>
+<li><a href="/problem/P1344">P1344 [USACO4.4]追查坏牛奶Pollutant Control</a></li>
+<li><a href="/problem/P2739">P2739 [USACO4.4]棋盘游戏Shuttle Puzzle</a></li>
+<li><a href="/problem/P2741">P2741 [USACO4.4]重叠的图像Frame Up</a></li>
+</ul>
+<h2 id="USACO-Section-5-1"><a class="headerlink" href="#USACO-Section-5-1"></a>USACO Section 5.1</h2>
+<p>二维凸包</p>
+<ul>
+<li><a href="/problem/P2742">P2742 [USACO5.1]圈奶牛Fencing the Cows /【模板】二维凸包</a></li>
+<li><a href="/problem/P2743">P2743 [USACO5.1]乐曲主题Musical Themes</a></li>
+<li><a href="/problem/P2749">P2749 [USACO5.1]夜空繁星Starry Night</a></li>
+</ul>
+<h2 id="USACO-Section-5-2"><a class="headerlink" href="#USACO-Section-5-2"></a>USACO Section 5.2</h2>
+<ul>
+<li><a href="/problem/P1560">P1560 [USACO5.2]蜗牛的旅行Snail Trails</a></li>
+</ul>
+<h2 id="USACO-Section-5-3"><a class="headerlink" href="#USACO-Section-5-3"></a>USACO Section 5.3</h2>
+<p>启发式搜索</p>
+<ul>
+<li><a href="/problem/P2701">P2701 [USACO5.3]巨大的牛棚Big Barn</a></li>
+<li><a href="/problem/P2744">P2744 [USACO5.3]量取牛奶Milk Measuring</a></li>
+<li><a href="/problem/P2745">P2745 [USACO5.3]窗体面积Window Area</a></li>
+<li><a href="/problem/P2746">P2746 [USACO5.3]校园网Network of Schools</a></li>
+</ul>
+<h2 id="USACO-Section-5-4"><a class="headerlink" href="#USACO-Section-5-4"></a>USACO Section 5.4</h2>
+<ul>
+<li><a href="/problem/P1345">P1345 [USACO5.4]奶牛的电信Telecowmunication</a></li>
+<li><a href="/problem/P2747">P2747 [USACO5.4]周游加拿大Canada Tour</a></li>
+<li><a href="/problem/P2748">P2748 [USACO16OPEN]Landscaping P</a></li>
+</ul>
+<h2 id="USACO-Section-5-5"><a class="headerlink" href="#USACO-Section-5-5"></a>USACO Section 5.5</h2>
+<ul>
+<li><a href="/problem/P1709">P1709 [USACO5.5]隐藏口令Hidden Password</a></li>
+<li><a href="/problem/P1856">P1856 [IOI1998] [USACO5.5] 矩形周长Picture</a></li>
+<li><a href="/problem/P2750">P2750 [USACO5.5]贰五语言Two Five</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src= "/img/loading.avif" data-lazy-src="https://cdn.luogu.com.cn/upload/image_hosting/1vfc90a9.png"></a><div class="post-copyright__author_name">Oblogger</div><div class="post-copyright__author_desc">A blog of czm</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fexample.com%2F2024%2F07%2F08%2F%25E6%25B4%259B%25E8%25B0%25B7%25E6%2596%25B0%25E6%2589%258B%25E6%259D%2591%2F&amp;title=%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91&amp;desc=undefined&amp;summary=undefined&amp;site=%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91&amp;pics=https%3A%2F%2Fcdn.luogu.com.cn%2Fupload%2Fimage_hosting%2F3zuknbzz.png" title="分享到QQ"><i class="solitude st-qq-fill"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fexample.com%2F2024%2F07%2F08%2F%25E6%25B4%259B%25E8%25B0%25B7%25E6%2596%25B0%25E6%2589%258B%25E6%259D%2591%2F&amp;title=%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91&amp;pic=https%3A%2F%2Fcdn.luogu.com.cn%2Fupload%2Fimage_hosting%2F3zuknbzz.png" title="分享到微博"><i class="solitude st-weibo-fill"></i></a><a class="social-share-ico icon-twitter" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fexample.com%2F2024%2F07%2F08%2F%25E6%25B4%259B%25E8%25B0%25B7%25E6%2596%25B0%25E6%2589%258B%25E6%259D%2591%2F&amp;text=%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91" title="分享到Twitter"><i class="solitude st-twitter-x-fill"></i></a><a class="social-share-ico icon-facebook" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fexample.com%2F2024%2F07%2F08%2F%25E6%25B4%259B%25E8%25B0%25B7%25E6%2596%25B0%25E6%2589%258B%25E6%259D%2591%2F" title="分享到Facebook"><i class="solitude st-facebook-fill"></i></a><a class="social-share-ico icon-telegram" target="_blank" rel="noopener" href="https://t.me/share/url?url=http%3A%2F%2Fexample.com%2F2024%2F07%2F08%2F%25E6%25B4%259B%25E8%25B0%25B7%25E6%2596%25B0%25E6%2589%258B%25E6%259D%2591%2F&amp;text=%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91" title="分享到Telegram"><i class="solitude st-telegram-fill"></i></a><a class="social-share-ico icon-whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send?text=%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91 http%3A%2F%2Fexample.com%2F2024%2F07%2F08%2F%25E6%25B4%259B%25E8%25B0%25B7%25E6%2596%25B0%25E6%2589%258B%25E6%259D%2591%2F" title="分享到WhatsApp"><i class="solitude st-whatsapp-fill"></i></a><a class="social-share-ico icon-linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fexample.com%2F2024%2F07%2F08%2F%25E6%25B4%259B%25E8%25B0%25B7%25E6%2596%25B0%25E6%2589%258B%25E6%259D%2591%2F&amp;title=%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91&amp;summary=undefined&amp;source=%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91" title="分享到LinkedIn"><i class="solitude st-linkedin-box-fill"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;http://example.com/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/&quot;)" title="复制文章链接"><i class="solitude st-links-line"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude st-qr-code-fill"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), 'http://example.com/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/');
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), 'http://example.com/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/');
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Oblogger</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%A2%98%E5%8D%95/"><span class="tags-punctuation"></span>题单<span class="tagsPageCount">1</span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/06/15/Latex%E5%9C%A3%E7%BB%8F/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Latex圣经</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude st-chat-fill"></i><span> 评论</span><span class="count"> (<span class="valine-comment-count" data-xid="/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/" itemprop="commentCount"><i class="solitude st-loading-line"></i></span>)</span></div><div class="comment-switch"><span class="first">Giscus</span><span id="switch-btn"></span><span class="second">Valine</span></div></div><div class="comment-wrap"><div id="giscus-wrap"></div><div class="vcomment" id="vcomment"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="https://cdn.luogu.com.cn/upload/image_hosting/1vfc90a9.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://7.isyangs.cn/34/65f2e4e0423cc-34.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">分享自己对编程的<b>热爱</b>，对美好生活的<b>向往</b>，对知识海洋<b>探索历程</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的知识和教程。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">czm</div><div class="author-info__desc">A blog of czm</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/William-czmo" title="Github"><i class="solitude  st-github-line"></i></a><a class="social-icon" href="/Zimo_Chen@Outlook.com" title="Mail"><i class="solitude  st-mail-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude st-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">新手村</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B4%9B%E8%B0%B7%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BB%E5%8A%A1"><span class="toc-text">洛谷的第一个任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E4%B8%8E%E5%88%86%E6%94%AF"><span class="toc-text">顺序与分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%EF%BC%81%E5%BE%AA%E7%8E%AF%EF%BC%81%E5%BE%AA%E7%8E%AF%EF%BC%81"><span class="toc-text">循环！循环！循环！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">简单字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92"><span class="toc-text">过程函数与递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOSS%E6%88%98-%E5%85%A5%E9%97%A8%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A01"><span class="toc-text">BOSS战-入门综合练习1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOSS%E6%88%98-%E5%85%A5%E9%97%A8%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A02"><span class="toc-text">BOSS战-入门综合练习2</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">普及练习场</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%A8%A1%E6%8B%9F"><span class="toc-text">简单的模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E6%A8%A1%E6%8B%9F"><span class="toc-text">交叉模拟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-text">排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8FEx"><span class="toc-text">排序Ex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86"><span class="toc-text">字符串处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83"><span class="toc-text">贪心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="toc-text">深度优先搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="toc-text">广度优先搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E6%9C%89%E6%8A%80%E5%B7%A7%E7%9A%84%E6%90%9C%E7%B4%A2"><span class="toc-text">带有技巧的搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95"><span class="toc-text">分治算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98"><span class="toc-text">简单数学问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E6%8E%A8%E4%B8%8E%E9%80%92%E5%BD%92%E4%BA%8C%E5%88%86"><span class="toc-text">递推与递归二分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">线性数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E5%BD%A2%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">树形数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%9A%84%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-text">动态规划的背包问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-text">线性动态规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BB%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-text">多维动态规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E8%A6%81%E6%8A%80%E5%B7%A7%E7%9A%84%E5%8A%A8%E8%A7%84%E4%B8%8E%E8%AE%B0%E5%BF%86%E5%8C%96"><span class="toc-text">更要技巧的动规与记忆化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-text">高精度算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%AA%E5%BF%83EX"><span class="toc-text">贪心EX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%95%B0%E5%AD%A6"><span class="toc-text">简单数学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOSS%E6%88%98-%E6%99%AE%E5%8F%8A%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A01"><span class="toc-text">BOSS战-普及综合练习1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOSS%E6%88%98-%E6%99%AE%E5%8F%8A%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A02"><span class="toc-text">BOSS战-普及综合练习2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOSS%E6%88%98-%E6%99%AE%E5%8F%8A%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A03"><span class="toc-text">BOSS战-普及综合练习3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%99%AE%E5%8F%8A%E5%B8%B8%E8%A7%81%E6%A8%A1%E6%9D%BF"><span class="toc-text">普及常见模板</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">提高历练地</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2Ex"><span class="toc-text">搜索Ex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92TG-lv-1"><span class="toc-text">动态规划TG.lv(1)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92TG-lv-2"><span class="toc-text">动态规划TG.lv(2)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92TG-lv-3"><span class="toc-text">动态规划TG.lv(3)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E8%AE%BA"><span class="toc-text">数论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%BC%88%E8%AE%BA"><span class="toc-text">博弈论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98"><span class="toc-text">其他数学问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">图的遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98"><span class="toc-text">最短路问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-text">最小生成树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%83%E5%A4%8D%E6%9D%82%E5%9B%BE%E8%AE%BAI"><span class="toc-text">较复杂图论I</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%83%E5%A4%8D%E6%9D%82%E5%9B%BE%E8%AE%BAII"><span class="toc-text">较复杂图论II</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-text">并查集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A0%86"><span class="toc-text">堆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80"><span class="toc-text">线段树树状数组基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E5%A5%87%E7%9A%84%E8%A7%A3%E6%B3%95"><span class="toc-text">神奇的解法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%8D%E5%A2%9E"><span class="toc-text">倍增</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F"><span class="toc-text">强连通分量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOSS%E6%88%98-%E6%8F%90%E9%AB%98%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A01"><span class="toc-text">BOSS战-提高综合练习1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOSS%E6%88%98-%E6%8F%90%E9%AB%98%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A02"><span class="toc-text">BOSS战-提高综合练习2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOSS%E6%88%98-%E6%8F%90%E9%AB%98%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A03"><span class="toc-text">BOSS战-提高综合练习3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E9%AB%98%E6%A8%A1%E6%9D%BF-nlogn%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">提高模板-nlogn数据结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">省选斗兽场&#x2F;NOI神殿</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%81%E9%80%89%E5%9F%BA%E7%A1%80-%E8%AF%BB%E5%85%A5-%E8%BE%93%E5%87%BA%E4%BC%98%E5%8C%96"><span class="toc-text">省选基础-读入&#x2F;输出优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%81%E9%80%89%E5%9F%BA%E7%A1%80-%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-text">省选基础-位运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%81%E9%80%89%E5%9F%BA%E7%A1%80-%E6%89%93%E8%A1%A8"><span class="toc-text">省选基础-打表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%921"><span class="toc-text">动态规划1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%922"><span class="toc-text">动态规划2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81%E2%80%94%E2%80%94%E6%9C%80%E5%A4%A7%E6%B5%81"><span class="toc-text">网络流——最大流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%B5%81%E2%80%94%E2%80%94%E8%B4%B9%E7%94%A8%E6%B5%81"><span class="toc-text">网络流——费用流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97"><span class="toc-text">单调队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B"><span class="toc-text">概率期望</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E5%9B%BE"><span class="toc-text">二分图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%82%B9%E5%88%86%E6%B2%BB"><span class="toc-text">点分治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84"><span class="toc-text">后缀数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E5%B8%AD%E6%A0%91"><span class="toc-text">主席树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E4%BD%8DDP"><span class="toc-text">数位DP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AC%E8%87%AA%E5%8A%A8%E6%9C%BA"><span class="toc-text">AC自动机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E8%A1%A1%E6%A0%91"><span class="toc-text">平衡树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86"><span class="toc-text">树链剖分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E6%A0%91"><span class="toc-text">动态树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E5%A5%97%E6%A0%91"><span class="toc-text">树套树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96Trie%E6%A0%91"><span class="toc-text">可持久化Trie树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%AB%E9%98%9F%E7%AE%97%E6%B3%95"><span class="toc-text">莫队算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%9D%97"><span class="toc-text">分块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94"><span class="toc-text">莫比乌斯反演</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">USACO</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-1-1"><span class="toc-text">USACO Section 1.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-1-2"><span class="toc-text">USACO Section 1.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-1-3"><span class="toc-text">USACO Section 1.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-1-4"><span class="toc-text">USACO Section 1.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-1-5"><span class="toc-text">USACO Section 1.5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-2-1"><span class="toc-text">USACO Section 2.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-2-2"><span class="toc-text">USACO Section 2.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-2-3"><span class="toc-text">USACO Section 2.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-2-4"><span class="toc-text">USACO Section 2.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-3-1"><span class="toc-text">USACO Section 3.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-3-2"><span class="toc-text">USACO Section 3.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-3-3"><span class="toc-text">USACO Section 3.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-3-4"><span class="toc-text">USACO Section 3.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-4-1"><span class="toc-text">USACO Section 4.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-4-2"><span class="toc-text">USACO Section 4.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-4-3"><span class="toc-text">USACO Section 4.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-4-4"><span class="toc-text">USACO Section 4.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-5-1"><span class="toc-text">USACO Section 5.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-5-2"><span class="toc-text">USACO Section 5.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-5-3"><span class="toc-text">USACO Section 5.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-5-4"><span class="toc-text">USACO Section 5.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USACO-Section-5-5"><span class="toc-text">USACO Section 5.5</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/" title="洛谷新手村"><img alt="洛谷新手村" src="https://cdn.luogu.com.cn/upload/image_hosting/3zuknbzz.png"></a><div class="content"><a class="title" href="/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/" title="洛谷新手村">洛谷新手村</a><a class="article-recent_post_categories" href="/2024/07/08/%E6%B4%9B%E8%B0%B7%E6%96%B0%E6%89%8B%E6%9D%91/">洛谷</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/15/Latex%E5%9C%A3%E7%BB%8F/" title="Latex圣经"><img alt="Latex圣经" src="https://cdn.luogu.com.cn/upload/image_hosting/x5o5m633.png"></a><div class="content"><a class="title" href="/2024/06/15/Latex%E5%9C%A3%E7%BB%8F/" title="Latex圣经">Latex圣经</a><a class="article-recent_post_categories" href="/2024/06/15/Latex%E5%9C%A3%E7%BB%8F/">其他</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/14/%E9%A2%98%E8%A7%A3%EF%BC%9ACF1970A1-Balanced-Shuffle-Easy/" title="题解：CF1970A1 Balanced Shuffle (Easy)"><img alt="题解：CF1970A1 Balanced Shuffle (Easy)" src="https://cdn.luogu.com.cn/upload/image_hosting/cx4m4j86.png"></a><div class="content"><a class="title" href="/2024/06/14/%E9%A2%98%E8%A7%A3%EF%BC%9ACF1970A1-Balanced-Shuffle-Easy/" title="题解：CF1970A1 Balanced Shuffle (Easy)">题解：CF1970A1 Balanced Shuffle (Easy)</a><a class="article-recent_post_categories" href="/2024/06/14/%E9%A2%98%E8%A7%A3%EF%BC%9ACF1970A1-Balanced-Shuffle-Easy/">题解</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/14/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" title="自我介绍"><img alt="自我介绍" src="https://cdn.luogu.com.cn/upload/image_hosting/xsm6mkoj.png"></a><div class="content"><a class="title" href="/2024/06/14/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" title="自我介绍">自我介绍</a><a class="article-recent_post_categories" href="/2024/06/14/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/">mine</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/10/hello-world/" title="Hello World"><img alt="Hello World" src="/img/default.avif"></a><div class="content"><a class="title" href="/2024/06/10/hello-world/" title="Hello World">Hello World</a><a class="article-recent_post_categories" href="/2024/06/10/hello-world/">mine</a></div></div></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Oblogger</span></div><div class="footer-bar-description">来自 czm 的文章</div><a class="footer-bar-link" href="/about/">了解更多</a></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/William-czmo" title="Github"><i class="solitude  st-github-line"></i></a><a class="deal_link" href="/Zimo_Chen@Outlook.com" title="Mail"><i class="solitude  st-mail-line"></i></a><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src= "/img/loading.avif" data-lazy-src="https://cdn.luogu.com.cn/upload/image_hosting/v6e5dtf6.png" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/1329819902" title="Bilibili"><i class="solitude  st-bilibili-line"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/iJsLc8jt/" title="抖音"><i class="solitude  st-douyin-fill"></i></a></div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="归档">归档</a><a class="footer-item" href="/categories/" title="分类">分类</a><a class="footer-item" href="/tags/" title="标签">标签</a></div></div><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://v6.51.la/" title="51la统计">51la统计</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/privacy/" title="用户协议">用户协议</a><a class="footer-item" href="/copyright/" title="版权协议">版权协议</a></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 By&nbsp;<a class="footer-bar-link" href="/">czm</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" alt="主题">主题</a><a class="footer-bar-link" href="/atom.xml" alt="订阅">订阅</a><a class="footer-bar-link cc" href="/null" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- right_menu--><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude st-arrow-left-line"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude st-arrow-right-line"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude st-restart-line"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude st-arrow-up-line"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude st-copy-fill"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude st-clipboard-fill"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude st-chat-new-fill"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude st-window-fill"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude st-link-line"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude st-copy-fill"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude st-download-cloud-fill"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude st-search-line"></i><span>站内搜索</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude st-signal-tower-fill"></i><span>随机短文</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/categories/')||rm.hideRightMenu()"><i class="solitude st-checkbox-multiple-blank-fill"></i><span>全部分类</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/tags/')||rm.hideRightMenu()"><i class="solitude st-price-tag-fill"></i><span>全部标签</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-commentBarrage" onclick="sco.switchCommentBarrage()"><i class="solitude st-chat-fill"></i><span class="menu-commentBarrage-text">关闭热评</span></div><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span class="menu-darkmode-text">深色模式</span></div><div class="rightMenu-item" id="menu-translate"><i class="solitude st-panben-line"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div><!-- inject body--><div><script src="/js/utils.js?v=1.12.2"></script><script src="/js/main.js?v=1.12.2"></script><script src="/js/third_party/waterfall.min.js?v=1.12.2"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/third_party/universe.min.js?v=1.12.2"></script><script>dark()
+</script><script src="/js/tw_cn.js?v=1.12.2"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js"><script>(() => {
+    document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+        utils.wrap(item, 'div', {class: 'katex-wrap'})
+    })
+})();
+</script></script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/meting/2.0.1/Meting.min.js"></script><script>const coverColorConfig = {
+    api: 'https://api.qjqq.cn/api/Imgcolor?img=',
+    time: 43200000
+}</script><script src="/js/covercolor/api.js?v=1.12.2"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><script src="/js/right_menu.js?v=1.12.2"></script><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id:"3IxFcE1J0NNeZ6rJ",ck:"3IxFcE1J0NNeZ6rJ"})</script>source/js/DynamicLine.js<div class="js-pjax"><script>(()=>{
+    const getGiscusTheme = theme => {
+        return theme === 'dark' ? 'dark' : 'light'
+    }
+
+    const loadGiscus = () => {
+        const config = Object.assign({
+            src: 'https://giscus.app/client.js',
+            'data-repo': 'William-czmo/blogGiscus',
+            'data-repo-id': 'R_kgDOMHUApA',
+            'data-category-id': 'DIC_kwDOMHUApM4Cf-10',
+            'data-mapping': 'pathname',
+            'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+            'data-reactions-enabled': '1',
+            crossorigin: 'anonymous',
+            async: true
+        },{"lang":"zh-cn","data-input-position":"top"})
+
+        const ele = document.createElement('script')
+        for (let key in config) {
+            ele.setAttribute(key, config[key])
+        }
+        document.getElementById('giscus-wrap').appendChild(ele)
+    }
+
+    const changeGiscusTheme = theme => {
+        const sendMessage = message => {
+            const iframe = document.querySelector('iframe.giscus-frame')
+            if (!iframe) return
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+        }
+
+        sendMessage({
+            setConfig: {
+                theme: getGiscusTheme(theme)
+            }
+        });
+    }
+
+    utils.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+    if ('Giscus' === 'Giscus' || !true) {
+        if (true) {
+            const giscusWrap = document.getElementById('giscus-wrap')
+            if (giscusWrap) {
+                utils.loadComment(giscusWrap, loadGiscus)
+            }
+        } else {
+            loadGiscus()
+        }
+    } else {
+        window.loadOtherComment = loadGiscus
+    }
+})()</script><script>(() => {
+    const initValine = () => {
+        const valine = new Valine({
+            el: '#vcomment',
+            appId: '0C9mRTGpxUTnUSgpDjZdBY5B-MdYXbMMI',
+            appKey: '9YJVnawVge1XQQhcwfNr2GQF',
+            avatar: 'https://cdn.luogu.com.cn/upload/image_hosting/1vfc90a9.png',
+            serverURLs: 'https://0c9mrtgp.api.lncldglobal.com',
+            emojiMaps: "",
+            path: window.location.pathname,
+            visitor: true,
+            ...null
+        })
+        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .vcontent img:not(.vemoji)'))
+        sco.owoBig({body: '.vwrap', item: '.vemojis i'})
+    }
+    const loadValine = async () => {
+        if (typeof Valine === 'function') setTimeout(initValine, 0)
+        else {
+            await utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.1/Valine.min.js').then(initValine)
+        }
+        true && barrageValine()
+    }
+    if ('Giscus' === 'Valine' || true) {
+        if (true) utils.loadComment(document.getElementById('vcomment'), loadValine)
+        else loadValine()
+    } else {
+        window.loadTwoComment = loadValine
+    }
+})()
+</script><script>async function barrageValine() {
+    const url = new URL('https://0c9mrtgp.api.lncldglobal.com/1.1/classes/Comment')
+    const params = {
+        url: window.location.pathname,
+        order: '-createdAt'
+    }
+    Object.entries(params).forEach(([key, value]) => url.searchParams.append(key, value))
+    await fetch(url, {
+        method: "GET",
+        headers: {
+            "X-LC-Id": "0C9mRTGpxUTnUSgpDjZdBY5B-MdYXbMMI",
+            "X-LC-Key": "9YJVnawVge1XQQhcwfNr2GQF",
+            "Content-Type": "application/json"
+        },
+    }).then(async res => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
+        const data = await res.json()
+        const init = () =>
+            initializeCommentBarrage(data.results
+                .filter(item => item.url === window.location.pathname)
+                .map(item => ({
+                    content: item.comment,
+                    nick: item.nick,
+                    mailMd5: md5(item.mail),
+                    id: item.objectId
+                })))
+        if (typeof md5 === "undefined") await utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js')
+        if (typeof initializeCommentBarrage === "undefined") await utils.getScript('/js/third_party/barrage.min.js?v=1.12.2').then(init)
+        else init()
+    }).catch(error => console.error("An error occurred while fetching comments: ", error))
+}</script><script defer pjax src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude st-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/cpp/')">cpp</a><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/czm/')">czm</a></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.12.2"></script><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2024/07/08/洛谷新手村/","2024/06/15/Latex圣经/","2024/06/14/题解：CF1970A1-Balanced-Shuffle-Easy/","2024/06/14/自我介绍/","2024/06/10/hello-world/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>
