@@ -3068,7 +3068,7 @@ span.tags-punctuation::before {
   height: 100%;
   left: 0;
   top: 0;
-  background: url("") center center no-repeat;
+  background: url("https://cdn.luogu.com.cn/upload/image_hosting/1vfc90a9.png") center center no-repeat;
   content: '';
   background-size: cover;
   transition: 0.2s cubic-bezier(0.45, 0.04, 0.43, 1.21);
@@ -3100,7 +3100,7 @@ span.tags-punctuation::before {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background: url("") center center no-repeat;
+  background: url("https://img.picgo.net/2024/07/20/qrcode_github.com0dda21e4019318a9.png") center center no-repeat;
   background-size: 100%;
 }
 #aside-content .card-widget.card-platform #flip-wrapper #flip-content .face.back {
@@ -3108,7 +3108,7 @@ span.tags-punctuation::before {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   box-sizing: border-box;
-  background: url("") center center no-repeat;
+  background: url("https://img.picgo.net/2024/07/20/qrcode_github.com0dda21e4019318a9.png") center center no-repeat;
   background-size: 100%;
 }
 #aside-content .card-widget.card-adsense {
